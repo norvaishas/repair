@@ -1,0 +1,71 @@
+.hero
+  padding: 50px 0 52px 0
+  background-color: $grey
+  &-block
+    display: flex
+    // align-items: center
+  &-text
+    flex-basis: 45%
+    padding-right: 120px
+    &__title
+      font-size: 41px
+      font-weight: 700
+      line-height: 55px
+      margin-bottom: 40px
+    &__subtitle
+      display: inline-block
+      font-size: 20px
+      font-weight: 700
+      margin-bottom: 69px
+  &-list /* Блок */
+    margin: 0
+    padding: 0
+    &__item /* Элемент */
+      display: flex
+      align-items: center
+      margin-bottom: 30px
+    &__image
+      width: 38px
+      height: 38px
+      border: 2px solid $main-color
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      margin-right: 30px
+    &__text
+      max-width: 300px
+      font-size: 14px
+      font-weight: 400
+      line-height: 24px
+@media (max-width: 1200px)
+  .hero
+    &-block
+      flex-direction: column
+    &-list
+      margin-bottom: 38px
+    &-text
+      padding-right: 10px
+      &__title
+        // text-align: center
+@media (max-width: 768px)
+  .hero
+    &-text
+      &__title
+        font-size: 24px
+        font-weight: 400
+        line-height: 1.4
+        margin-bottom: 13px
+      &__subtitle
+        margin-bottom: 28px
+        font-size: 16px
+        font-weight: 400
+    &-list
+      &__item
+        margin-bottom: 20px
+      &__text
+        font-size: 12px
+        font-weight: 400
+        max-width: 198px
+      &__image
+        margin-right: 15px
