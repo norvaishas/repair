@@ -134,6 +134,11 @@ img {
   display: flex;
 }
 
+.hero-image {
+  -ms-flex-preferred-size: 56%;
+      flex-basis: 56%;
+}
+
 .hero-text {
   -ms-flex-preferred-size: 45%;
       flex-basis: 45%;
