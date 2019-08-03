@@ -1,0 +1,103 @@
+.offer
+  padding: 84px 0 93px 0
+  position: relative /* 2. Для того чтоб работал position: absolute у дочернего псевдоэлемента */
+  background: url('../img/offer/offer-bg.jpg') no-repeat
+  background-position: center right
+  background-size: contain
+  &:before
+    position: absolute /* 1. Задаем абсолютное позиционирование относительно родительского элемента */
+    content: ''
+    width: 50%
+    height: 100%
+    top: 0 /* 3. Перемещаем к верхней границе родителя*/
+    left: 0 /* 4. На всякий случай фиксируем положение слева */
+    background-color: #fff
+  &-block
+    width: 50%
+    padding-right: 90px
+    position: relative /* 5. чтоб он не скрывался за псевдоэлементом */
+    &__title
+      max-width: 346px /* 360px */
+      line-height: 35px
+      margin-bottom: 24px
+    &__subtitle
+      display: inline-block
+      max-width: 238px
+      margin-bottom: 30px
+    &__input
+      width: 240px
+      margin-bottom: 30px
+      &:first-child /* стили только для первого элемента */
+        margin-right: 10px
+    &__button
+      width: 100%
+      min-height: 70px
+      font-size: 16px
+      +bold
+      margin-bottom: 32px
+    &__contacts
+      display: flex
+      justify-content: space-between
+      font-size: 15px
+      line-height: 24px
+    &__text
+      max-width: 225px
+    &__call-back
+      display: flex
+      flex-direction: column
+      max-width: 192px
+    &__phone
+      text-decoration: none
+      font-size: 15px
+      +bold
+      color: black
+      // font-weight: 400
+      // line-height: 24px
+@media (max-width: 1200px)
+  .offer
+    background-size: cover /* заполнение всего пространства отведенного изображению */
+    &-block
+      &__form
+        width: 100%
+      &__input
+        width: 100%
+        margin-bottom: 10px
+      &__button
+        font-size: 14px
+      &__contacts
+        flex-direction: column
+      &__text
+        line-height: 19px
+        width: 100%
+        margin-bottom: 10px
+      &__call-back
+        width: 100%
+        line-height: 19px
+@media (max-width: 768px)
+  .offer
+    background: #fff
+    &-block
+      width: 100%
+      padding-right: 0
+@media (max-width: 568px)
+  .offer
+    padding-top: 35px
+    &-block
+      margin: auto
+      &__title
+        font-size: 18px
+        max-width: 260px
+        line-height: 23px
+        margin-bottom: 15px
+      &__subtitle
+        font-size: 14px
+      &__input
+        max-width: 275px
+        min-height: 65px
+      &__button
+        max-width: 275px
+        min-height: 70px
+        line-height: 18px
+        margin-bottom: 0
+      &__form
+        margin-bottom: 27px
