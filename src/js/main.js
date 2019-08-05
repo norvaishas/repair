@@ -4,7 +4,9 @@ var close = document.querySelector('#close')
 
 button.addEventListener('click', function() {
   modal.classList.add('modal_active');
-  // console.log('Пользователь кликнул на кнопку!');
+  setTimeout(function () {
+    modal.classList.remove('modal_active');
+  }, 5000);
 
 
 });
